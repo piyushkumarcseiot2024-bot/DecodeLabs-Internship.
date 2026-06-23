@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickCraft Keyboards | Grounded Mechanical Excellence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="page-container">
+        <header class="site-header">
+            <div class="logo">ClickCraft</div>
+            <nav class="site-nav">
+                <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#keyboards-section">Keyboards</a></li>
+                    <li><a href="#accessories-section">Accessories</a></li>
+                    <li><a href="#billing-section">Checkout</a></li>
+                </ul>
+            </nav>
+            <div class="cart-status" aria-live="polite">
+                Cart: <span id="cart-count">0</span>
+            </div>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Tactile Precision.<br>Warm Aesthetics.</h1>
+                <p>Experience an intentional shift away from sterile, cold electronics. Welcome to organic craftsmanship built for your fingertips.</p>
+                <a href="#keyboards-section" class="btn-primary">Explore Collection</a>
+            </div>
+        </section>
+
+        <div class="layout-wrapper">
+            <aside class="sidebar">
+                <h3>Filter Catalog</h3>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="65%">65% Compact</button>
+                    <button class="filter-btn" data-filter="75%">75% Streamlined</button>
+                    <button class="filter-btn" data-filter="TKL">Tenkeyless (TKL)</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                
+                <section id="keyboards-section" class="catalog-block">
+                    <h2>The Grounded Collection</h2>
+                    <div class="product-grid">
+                        
+                        <article class="product-card" data-category="75%">
+                            <div class="product-image clay-image">
+                                <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=600&h=400&q=80" alt="Terracotta 75 Custom Mechanical Keyboard" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Terracotta 75</h3>
+                                <p class="product-desc">Warmed premium enclosure matched with lubricated, butter-smooth linear switches.</p>
+                                <div class="product-meta">
+                                    <span class="price">$185.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="65%">
+                            <div class="product-image wave-image">
+                                <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&h=400&q=80" alt="Ethereal Wave 65 Minimalist Custom Keyboard" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Ethereal Wave 65</h3>
+                                <p class="product-desc">Ultra-compact layout showcasing a deep brass plate and silent tactile typing paths.</p>
+                                <div class="product-meta">
+                                    <span class="price">$165.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="TKL">
+                            <div class="product-image slate-image">
+                                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&h=400&q=80" alt="Moonlit Slate Tenkeyless Keyboard Setup" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Moonlit Slate TKL</h3>
+                                <p class="product-desc">A refined, full-bodied typing framework with acoustics inspired by stone and timber.</p>
+                                <div class="product-meta">
+                                    <span class="price">$195.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="65%">
+                            <div class="product-image sage-image">
+                                <img src="https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?auto=format&fit=crop&w=600&h=400&q=80" alt="Desert Sage 65 Olive Anodized Mechanical Keyboard" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Desert Sage 65</h3>
+                                <p class="product-desc">Anodized olive housing wrapped completely around heavy tactiles for structural snap.</p>
+                                <div class="product-meta">
+                                    <span class="price">$170.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="75%">
+                            <div class="product-image mocha-image">
+                                <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&fit=crop&w=600&h=400&q=80" alt="Mocha Mousse Pro Custom Walnut Accent Keyboard" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Mocha Mousse Pro 75</h3>
+                                <p class="product-desc">Our flagship model utilizing deep walnut side panels and premium gasket mounting hardware.</p>
+                                <div class="product-meta">
+                                    <span class="price">$210.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="TKL">
+                            <div class="product-image charcoal-image">
+                                <img src="https://images.unsplash.com/photo-1529336953128-a85760f58cb5?auto=format&fit=crop&w=600&h=400&q=80" alt="Obsidian Classic Dark Matte Keyboard" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Obsidian Classic TKL</h3>
+                                <p class="product-desc">Matte dark finish displaying a stark contrast to high-polished internal brass accents.</p>
+                                <div class="product-meta">
+                                    <span class="price">$225.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section id="accessories-section" class="catalog-block">
+                    <h2>Accessories</h2>
+                    <div class="product-grid">
+                        
+                        <article class="product-card" data-category="accessories">
+                            <div class="product-image wood-image">
+                                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&h=400&q=80" alt="Solid Walnut Ergonomic Wrist Rest" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Walnut Ergonomic Rest</h3>
+                                <p class="product-desc">Solid american walnut wood, carved perfectly to relieve wrist angle strain.</p>
+                                <div class="product-meta">
+                                    <span class="price">$45.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="accessories">
+                            <div class="product-image cable-image">
+                                <img src="https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&w=600&h=400&q=80" alt="Custom Braided Coiled Paracord Aviator Cable" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Ethereal Coiled Cable</h3>
+                                <p class="product-desc">Double-sleeved design with a premium detachable aviator connector port hookup.</p>
+                                <div class="product-meta">
+                                    <span class="price">$38.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="accessories">
+                            <div class="product-image caps-image">
+                                <img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?auto=format&fit=crop&w=600&h=400&q=80" alt="Macro Shot of Premium PBT Custom Keycaps" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Pastel Clay PBT Set</h3>
+                                <p class="product-desc">Thick dye-subbed profiles featuring clean typography iconography accents.</p>
+                                <div class="product-meta">
+                                    <span class="price">$65.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" data-category="accessories">
+                            <div class="product-image switches-image">
+                                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=600&h=400&q=80" alt="Mechanical Keyboard Linear Switch Components" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Cream Linear Switches (90x)</h3>
+                                <p class="product-desc">Factory hand-lubricated high molecular switches designed for clacky sound fields.</p>
+                                <div class="product-meta">
+                                    <span class="price">$55.00</span>
+                                    <button class="btn-secondary add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section id="billing-section" class="catalog-block billing-block">
+                    <h2>Checkout & Billing</h2>
+                    <div class="billing-container">
+                        <form id="checkout-form" class="billing-form">
+                            <div class="form-section">
+                                <h3>Shipping Information</h3>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" placeholder="Jane Doe" required>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" placeholder="jane@example.com" required>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="address">Street Address</label>
+                                        <input type="text" id="address" placeholder="123 Artisan Way" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" placeholder="Seattle" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipCode">Zip / Postal Code</label>
+                                        <input type="text" id="zipCode" placeholder="98101" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Payment Details</h3>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="cardName">Name on Card</label>
+                                        <input type="text" id="cardName" placeholder="Jane Doe" required>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="cardNumber">Card Number</label>
+                                        <input type="text" id="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expDate">Expiry Date</label>
+                                        <input type="text" id="expDate" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" id="cvv" placeholder="•••" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-primary checkout-btn">Complete Purchase</button>
+                        </form>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p><strong>Digital Craftsmanship Blueprint</strong></p>
+                <p>Built completely on foundational frameworks. Strict compliance with universal access design paradigms.</p>
+                <p class="copyright">&copy; 2026 ClickCraft Labs. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

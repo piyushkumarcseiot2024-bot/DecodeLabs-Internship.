@@ -1,0 +1,414 @@
+/* --- 2025 UI/UX Aesthetic Variables & Palettes --- */
+:root {
+    --mocha-mousse: #A5956F;   /* Grounding Warm Tone */
+    --ethereal-blue: #A0D4E0;  /* Trust Interface Blue */
+    --moonlit-grey: #F2F0EA;   /* Soft Refined Background */
+    --dark-charcoal: #2C2A29;  /* Accessible Contrast Type */
+    --pure-white: #FFFFFF;
+    
+    /* Typography Rules Specified in 1.pdf */
+    --font-headlines: 'Inter', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* --- Core Structure Foundation --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--moonlit-grey);
+    color: var(--dark-charcoal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Fluid Typography Systems */
+h1 {
+    font-family: var(--font-headlines);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5vw + 1rem, 3.8rem);
+    line-height: 1.15;
+}
+
+h2 {
+    font-family: var(--font-headlines);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3vw + 1rem, 2.2rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h3 {
+    font-family: var(--font-headlines);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* --- Macro Architecture Implementation (Mobile-First Layout Grid) --- */
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    min-height: 100vh;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--pure-white);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--font-headlines);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--dark-charcoal);
+    letter-spacing: -0.5px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: none;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--pure-white);
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    border-top: 1px solid var(--moonlit-grey);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    font-weight: 600;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-charcoal);
+}
+
+.cart-status {
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: var(--ethereal-blue);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+}
+
+/* --- Hero Element Layout Container --- */
+.hero-section {
+    background: linear-gradient(180deg, #EBE8E0 0%, var(--moonlit-grey) 100%);
+    padding: 4rem 1.5rem;
+    text-align: center;
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content p {
+    margin: 1.2rem auto 2rem;
+    max-width: 580px;
+    color: #555250;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--mocha-mousse);
+    color: var(--pure-white);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover { background-color: #8E7F5B; }
+
+.btn-secondary {
+    background-color: var(--dark-charcoal);
+    color: var(--pure-white);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Content Wrapper & Section Blocks --- */
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+}
+
+.catalog-block {
+    margin-bottom: 3.5rem;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.06);
+    margin-bottom: 3.5rem;
+}
+
+/* Sidebar UI Navigation Filter Array */
+.sidebar {
+    background-color: var(--pure-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    background-color: var(--moonlit-grey);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--mocha-mousse);
+    color: var(--pure-white);
+}
+
+/* Micro Component Structure: Image Rendering Architecture */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: var(--pure-white);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Strict containment of image assets */
+    padding: 1rem;
+}
+
+/* Strict Image Scaling & Thematic Grounding Contexts */
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain proper asset aspect ratios */
+    display: block;
+}
+
+/* Warm, Grounded Context Image Color Blocks contrast deep natural tones[cite: 1] */
+.clay-image { background-color: #D3C2B0; }
+.wave-image { background-color: var(--ethereal-blue); }
+.slate-image { background-color: #C8D3D5; }
+.sage-image { background-color: #D4D6B9; }
+.mocha-image { background-color: #C2B294; }
+.charcoal-image { background-color: #9AA0A6; }
+.wood-image { background-color: #B09E86; }
+.cable-image { background-color: #BDD1DC; }
+.caps-image { background-color: #E2CDD1; }
+.switches-image { background-color: #E8DCC4; }
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    color: #615E5B;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Footer Container System */
+.site-footer {
+    background-color: var(--dark-charcoal);
+    color: var(--moonlit-grey);
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.footer-content .copyright {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* --- 📱 STRATEGIC RESPONSIVE VIEWBREAK INTERFACES (From 1.pdf) --- */
+
+/* Tablet Optimization Layer */
+@media (min-width: 768px) {
+    .menu-toggle { display: none; }
+    .nav-links { display: flex; }
+    .filter-group { flex-direction: column; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop Master Framework View Expansion */
+@media (min-width: 1024px) {
+    .layout-wrapper {
+        grid-template-columns: 240px 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .site-header {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+/* --- Billing & Checkout Section Styles --- */
+.billing-block {
+    scroll-margin-top: 100px; /* Ensures header doesn't overlap on anchor jump */
+}
+
+.billing-container {
+    background-color: var(--pure-white);
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    max-width: 800px;
+}
+
+.billing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.form-section h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    color: var(--dark-charcoal);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--dark-charcoal);
+}
+
+.form-group input {
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--moonlit-grey);
+    color: var(--dark-charcoal);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--mocha-mousse);
+    background-color: var(--pure-white);
+    box-shadow: 0 0 0 3px rgba(165, 149, 111, 0.15);
+}
+
+.form-group input::placeholder {
+    color: #A09E9C;
+}
+
+.checkout-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Tablet & Desktop Layout Fixes for the Form */
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .full-width {
+        grid-column: 1 / -1;
+    }
+}
